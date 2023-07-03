@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starbucks Landing Page</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <style>
+    h2 span {
+      font-family: Georgia, serif;
+    }
+  </style>
+  <section>
+    <div class="circle"></div>
+    <header>
+      <a href="#"><img src="img/logo.png" class="logo" alt="logo" /></a>
+      <div class="toggle" onclick="toggleMenu()"></div>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">What's New</a></li>
+        <li><a href="#">Order</a></li>
+        <li><a href="#">Gift Card</a></li>
+      </ul>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textBox">
+        <h2>"<span>Starbucks :Coffee, Passion, and Community"</h2>
+        <p>Experience Something New!</span></p>
+        <a href="#">Discover</a>
+      </div>
+
+      <!-- Swiper -->
+      <div class="imgBox">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/1.png"></div>
+            <div class="swiper-slide"><img src="img/2.png"></div>
+            <div class="swiper-slide"><img src="img/4.png"></div>
+            <div class="swiper-slide"><img src="img/5.png"></div>
+            <div class="swiper-slide"><img src="img/6.png"></div>
+            <div class="swiper-slide"><img src="img/7.png"></div>
+            <div class="swiper-slide"><img src="img/8.png"></div>
+            <div class="swiper-slide"><img src="img/9.png"></div>
+            <div class="swiper-slide"><img src="img/10.png"></div>
+            <div class="swiper-slide"><img src="img/11.png"></div>
+            <div class="swiper-slide"><img src="img/12.png"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="social">
+      <li>
+        <a href="https://www.facebook.com/Starbucks/"><img
+            src="https://img.icons8.com/ios-filled/50/000000/facebook-f.png" alt="facebook" /></a>
+      </li>
+      <li>
+        <a href="https://twitter.com/Starbucks"><img src="https://img.icons8.com/ios-filled/50/000000/twitter.png"
+            alt="twitter" /></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/starbucks/"><img
+            src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png" alt="instagram" /></a>
+      </li>
+    </ul>
+  </section>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      loop: true,
+    });
+
+
+    function toggleMenu() {
+      const menuToggle = document.querySelector('.toggle');
+      const navigation = document.querySelector('.navigation')
+      menuToggle.classList.toggle('active')
+      navigation.classList.toggle('active')
+    }
+  </script>
+</body>
+
+</html>
